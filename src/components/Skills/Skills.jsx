@@ -1,20 +1,17 @@
-import React from 'react';
-import Card from '../Card/Card';
+import { Card } from '../index';
 import './SkillsStyle.css';
 import { skillsData } from '../../models/data';
 
-const Skills = () => {
-  // console.log(skillsData)
+export const Skills = () => {
+  
   return (
     <section className='skills-section'>
       <header>Skills</header>
       <div className='card-section'>
       {Object.values(skillsData).map((skill, index) => (
-        <Card key={index} data={skill} thisClass={'skill'}/>
+        <Card key={skill + index} data={skill} thisClass={'skill'}/>
       ))}
       </div>
     </section>
   )
 }
-
-export default Skills;

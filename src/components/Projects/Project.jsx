@@ -1,7 +1,7 @@
-import React from 'react';
+import { FormattedArray } from '../index';
 import { DiGithubFull } from "react-icons/di";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import FormattedArray from '../FormattedArray/FormattedArray';
+
 
 const Project = ({data, isTransitioning}) => {
   return (

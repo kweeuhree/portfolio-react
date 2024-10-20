@@ -1,12 +1,8 @@
-import React from 'react';
-// import components
-import Contacts from '../../components/Contacts/Contacts';
-import Form from '../../components/Form/Form';
-//import styles
-import './ContactPageStyle.css';
-import './ContactNestHubStyle.css';
+import { Contacts, Form } from '../../components';
 
-const ContactPage = () => {
+import './ContactPageStyle.css';
+
+export const ContactPage = () => {
   return (
     <section className='display-flex contact-page'>
 
@@ -32,5 +28,4 @@ const ContactPage = () => {
     </section>
   )
 }
-
-export default ContactPage;                                              
+                                         

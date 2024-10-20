@@ -1,14 +1,14 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './NavBarStyle.css';
-import { Link } from 'react-router-dom';
-import { navBarData } from '../../models/data.js';
 
-const NavBar = () => {
+const navBarData = ['home','contact'];
+
+export const NavBar = () => {
     const linkJSX = navBarData.map((item, index) => (
       <li className={`link link-${item}`} key={index}>
-        <Link  to={`/${item}`}>
+        <NavLink  to={`/${item}`}>
             {item}
-        </Link>
+        </NavLink>
       </li>
     ));
 
@@ -16,5 +16,3 @@ const NavBar = () => {
     <ul className="nav-container">{linkJSX}</ul>
   );
 };
-
-export default NavBar;

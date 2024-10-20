@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import './FormStyle.css';
 import './FormNestHubStyle.css';
 
-const Form = () => {
+export const Form = () => {
   //initialize form state
   const [formData, setFormData] = useState({
     user_name :'',
@@ -51,8 +51,6 @@ const Form = () => {
     emailjs.sendForm(service_id_emailjs, template_id_emailjs, event.target)
     //if successful
             .then(() => {
-              //print to console
-                console.log('Email sent');
                 //set success message
                 setAlertBox();
                 //set time last email was sent
@@ -60,9 +58,8 @@ const Form = () => {
                 //update error state to null
                 setError('');
             }, (error) => { //if not successful
-                console.log('Failed to send the email.', error);
-                setError('Failed to send the email.');
-                //remove fro DOM
+              setError('Failed to send the email.', error);
+                //remove from DOM
                 removeError();
             });
 
@@ -124,4 +121,3 @@ const Form = () => {
   )
 }
 
-export default Form;

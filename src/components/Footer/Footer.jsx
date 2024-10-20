@@ -1,9 +1,8 @@
-import React from 'react';
-import NavBar from '../NavBar/NavBar';
+import { NavBar } from '../index.js';
 import { symbols } from '../../models/data.js';
 import './FooterStyle.css';
 
-const Footer = () => {
+export const Footer = () => {
   
   const year = new Date().getFullYear();
 
@@ -17,5 +16,3 @@ const Footer = () => {
     </div>
   )
 }
-
-export default Footer;

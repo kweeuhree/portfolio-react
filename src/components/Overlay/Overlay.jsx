@@ -1,17 +1,15 @@
 import { Suspense, lazy } from 'react';
-//import components
+
+import { Button, Loading, FormattedArray} from '../index';
+
+import { symbols } from '../../models/data';
+import './OverlayStyle.css';
+
 const ImageContainer = lazy(() => {
   return new Promise(resolve => {
     setTimeout(() => resolve(import('../ImageContainer/ImageContainer')), 700); //add delay to display Loading
   });
 });
-import Button from '../Button/Button';
-import Loading from '../Loading/Loading';
-import FormattedArray from '../FormattedArray/FormattedArray';
-//import  symbols
-import { symbols } from '../../models/data';
-//import styles
-import './OverlayStyle.css';
 
 
 const Overlay = ({ overlay, closeOverlay }) => {

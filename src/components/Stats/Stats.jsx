@@ -1,13 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-//github api logic for fetching user data
-import { fetchUserData } from '../../utils/fetchData';
-//import custom hook
-import useIntersectionObserver from '../../utils/useIntersectionObserver';
-//import styles
-import './StatsStyle.css';
-import './StatsNestHubStyle.css';
+import { useState, useEffect, useRef } from 'react';
+import { fetchUserData, useIntersectionObserver } from '../../utils';
 
-const Stats = () => {
+import './StatsStyle.css';
+
+export const Stats = () => {
   // initialize state to store most used languages information
   const [languages, setLanguages] = useState([]);
    //reference for the container with images
@@ -54,7 +50,7 @@ const Stats = () => {
        </div>));
       }
 
-      console.log(hexArray, 'hex array');
+      // console.log(hexArray, 'hex array');
 
       return hexArray;
     }
@@ -72,4 +68,3 @@ const Stats = () => {
   )
 }
 
-export default Stats;

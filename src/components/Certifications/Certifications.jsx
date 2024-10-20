@@ -1,15 +1,12 @@
-import React, {useState } from 'react';
-//import components
+import {useState } from 'react';
+
 import Overlay from '../Overlay/Overlay';
-import Card from '../Card/Card';
+import { Card } from '../index';
 
-//import styles
 import './CertificationsStyle.css';
-// import './CertificationsNestHubStyle.css'
 
 
-
-const Certifications = ({ data, header }) => {
+export const Certifications = ({ data, header }) => {
 
   // initialize state for setting an overlay with a certification
   const [overlay, setOverlay] = useState(null);
@@ -18,7 +15,6 @@ const Certifications = ({ data, header }) => {
   const showOverlay = (credential) => {
     // set current credential as overlay
     setOverlay(credential);
-    // console.log(credential);
   };
 
   // stop displaaying an overlay
@@ -56,5 +52,3 @@ const Certifications = ({ data, header }) => {
     </section>
   );
 };
-
-export default Certifications;

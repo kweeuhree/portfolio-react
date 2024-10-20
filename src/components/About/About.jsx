@@ -1,20 +1,19 @@
-import React, { useRef } from 'react';
-//import descriptions
-import { introductionData } from '../../models/data';
-//import intersection observer hook
-import useIntersectionObsever from '../../utils/useIntersectionObserver';
+import { useRef } from 'react';
+import { useIntersectionObserver } from '../../utils';
+import ImageContainer from '../ImageContainer/ImageContainer';
 //import main image
 import picture from '../../assets/images/picture.png'; 
-// import components
-import ImageContainer from '../ImageContainer/ImageContainer';
-//import styles
-import './PictureStyle.css';
+//import descriptions
+import { introductionData } from '../../models/data';
 
-const Picture = () => {
 
+
+import './AboutStyle.css';
+
+export const About = () => {
   const pictureRef = useRef(null);
-  const isInView = useIntersectionObsever(pictureRef);
-
+  const isInView = useIntersectionObserver(pictureRef);
+  
   return (
     <section className='picture-section'>
 
@@ -34,5 +33,3 @@ const Picture = () => {
     </section>
   )
 }
-
-export default Picture;

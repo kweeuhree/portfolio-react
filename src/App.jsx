@@ -1,48 +1,30 @@
+import { Suspense, lazy } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-// import components
-import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
-// import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-// import pages
-import CertificationsPage from './pages/CertificationsPage/CertificationsPage';
-import ContactPage from './pages/ContactPage/ContactPage';
-import MainPage from './pages/MainPage';
-//import styles
+import { Layout } from './pages';
+import { ErrorBoundary, Loading } from './components';
+
 import './App.css';
 
+// lazy load MainPage and ContactPage
+const MainPage = lazy(() => import('./pages/MainPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 
 function App() {
 
   return (
-    <div className='App'>
-      {/* navigation bar */}
-      <nav>
-          <NavBar />
-      </nav>
-
-    {/* main section */}
-      <main>
-          <Routes>
-            <Route path={'/'} element={<MainPage />} />
-            <Route path={'/home'} element={<MainPage />} />
-            {/* <Route path={'/skills'} element={<Skills />} /> */}
-            <Route path={'/projects'} element={<Projects />} />
-            <Route path={'/certifications'} element={<CertificationsPage />} />
+    <ErrorBoundary>
+      <Suspense fallback={<Loading />}>
+      <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<MainPage	/>}	/>
             <Route path={'/contact'} element={<ContactPage />} />
-            {/* catch all route */}
+            {/* catch all route - replace to a 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </main>
-
-      {/* footer */}
-      <footer>
-          <Footer />
-      </footer>
-
-
-    </div>
+        </Route>
+      </Routes>
+      </Suspense>
+    </ErrorBoundary>
   );
-};
+}
 
 export default App;

@@ -47,20 +47,15 @@ const getRepos = async (reposUrl) => {
 * @returns {{ data: Array<Object>, reposUrl: string }} An object containing the repository data and the API URL.
 */
 const fetchUser = async (username) => {
-  // console.log('attempting fetch');
   const baseUrl = `https://api.github.com/`;
   const wordQuery = 'users/';
   const fetchRequest = `${baseUrl}${wordQuery}${username}`;
-
-  // console.log(fetchRequest);
 
   try {
     const response = await fetch(fetchRequest);
     const data = await response.json();
     const reposUrl = data.repos_url;
 
-    // console.log(data, 'data');
-    // console.log(reposUrl, 'reposUrl');
     return { data, reposUrl };
 
   } catch (error) {
@@ -136,10 +131,8 @@ export const fetchUserData = async (username) => {
   const { data, reposUrl } = await fetchUser(username);
   // get array with first 30 repositories
   const reposData = await getRepos(reposUrl);
-  // console.log(reposData, 'repos data of fetchData');
   // get top three most used languages
   const mostUsedLang = getMostUsedLang(reposData);
-// console.log(mostUsedLang, 'of fetchData');
   return { data, reposData, mostUsedLang };
 }
 
