@@ -1,48 +1,34 @@
+// import { Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-// import components
-import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
-// import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-// import pages
-import CertificationsPage from './pages/CertificationsPage/CertificationsPage';
-import ContactPage from './pages/ContactPage/ContactPage';
-import MainPage from './pages/MainPage';
-//import styles
+import { Layout, ContactPage } from './pages';
+import { default as MainPage } from '../src/pages/MainPage';
+import { ErrorBoundary } from './components';
+
 import './App.css';
 
+// // lazy load MainPage
+// const MainPage = lazy(() => import('./pages/MainPage'));
 
 function App() {
 
   return (
-    <div className='App'>
-      {/* navigation bar */}
-      <nav>
-          <NavBar />
-      </nav>
-
-    {/* main section */}
-      <main>
-          <Routes>
-            <Route path={'/'} element={<MainPage />} />
-            <Route path={'/home'} element={<MainPage />} />
-            {/* <Route path={'/skills'} element={<Skills />} /> */}
-            <Route path={'/projects'} element={<Projects />} />
-            <Route path={'/certifications'} element={<CertificationsPage />} />
-            <Route path={'/contact'} element={<ContactPage />} />
-            {/* catch all route */}
+    <ErrorBoundary>
+      {/* <Suspense fallback={<Loading />}> */}
+     
+      <Routes>
+          <Route path="/" element={<Layout />}>
+            
+            <Route index element={<MainPage	/>}	/>
+            <Route path={'contact'} element={<ContactPage />} />
+          
+          </Route>
+             {/* catch all route - replace to a 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </main>
-
-      {/* footer */}
-      <footer>
-          <Footer />
-      </footer>
-
-
-    </div>
+      </Routes>
+     
+      {/* </Suspense> */}
+    </ErrorBoundary>
   );
-};
+}
 
 export default App;

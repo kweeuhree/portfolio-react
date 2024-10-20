@@ -1,0 +1,48 @@
+.picture-section {
+    display: flex;
+    box-shadow: 
+        10px 10px 5px 0px rgba(240, 99, 84, 0.1),
+        10px 10px 70px 0px rgba(255, 255, 255, 0.15);
+    border: 5px solid transparent;
+    border-image-slice: 1; 
+    --angle: 0deg;
+    border-image: linear-gradient(var(--angle), #733ad58f, rgba(241, 81, 63, 0.705)) 1;
+    animation: 4s rotateBorder linear infinite;
+}
+
+.introduction {
+    opacity: 0;
+    animation: softAppearance 1s linear 1s forwards;
+}
+
+.image-container img {
+    object-fit: fill;
+    opacity: 0.8;
+    border-bottom: 1px solid rgba(250, 128, 114, 0.767);
+    filter: drop-shadow(0 2px 3px); 
+    animation: float 5s ease-in-out infinite;
+}
+
+.gradient {
+    background: linear-gradient(200deg, #212523, #465551);
+    background-size: 400% 400%;
+    position: relative;
+    animation: move 10s ease infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0%); }
+    50% { transform: translateY(1%); }
+}
+
+@keyframes move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rotateBorder {
+    to {
+        --angle: 360deg;
+    }
+}

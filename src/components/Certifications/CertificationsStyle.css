@@ -1,69 +1,11 @@
-@media (min-width: 1280px) {
-    .top-certifications {
-    display: flex;
-    flex-direction: unset;
-    align-items: center;
-    padding-inline-start: unset;
-}
-
-.top-certifications p {
-    font-size: unset;
-    text-wrap: nowrap;
-    margin-inline-end: 2%;
-    border: 1px dashed rgba(240, 248, 255, 0.5);
-    height: 3rem;
-    border-radius: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-inline-start: 2%;
-    padding-inline-end: 2%;
-}
-  }
-  /* --------------------------------------end desktop---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mid-large------------------- */
-  
-  @media (min-width: 880px) and (max-width: 1280px) {
-    .top-certifications {
-    display: flex;
-    flex-direction: unset;
-    align-items: center;
-    padding-inline-start: unset;
-}
-
-.top-certifications p {
-    font-size: 1.5rem;
-    text-wrap: nowrap;
-    margin-inline-end: 2%;
-    border: 1px dashed rgba(240, 248, 255, 0.5);
-    height: 3rem;
-    border-radius: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-inline-start: 2%;
-    padding-inline-end: 2%;
-}
-  }
-  /* --------------------------------------end mid-large---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mid------------------- */
-  
-  @media (min-width: 403px) and (max-width: 880px) {
-    .top-certifications {
+.top-certifications {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-inline-start: 5%;
 }
 
 .top-certifications p {
-    font-size: 1.4rem;
-    text-wrap: nowrap;
-    margin-inline-end: 2%;
     border: 1px dashed rgba(240, 248, 255, 0.5);
-    height: 3rem;
     border-radius: 1em;
     display: flex;
     justify-content: center;
@@ -71,41 +13,9 @@
     padding-inline-start: 2%;
     padding-inline-end: 2%;
 }
-
-
-  }
-  /* --------------------------------------end mid---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mobile------------------- */
-  
-  @media (max-width: 403px) {
-    .top-certifications {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-inline-start: 4%;
-}
-
-.top-certifications p {
-    font-size: unset;
-    text-wrap: nowrap;
-    margin-inline-end: 2%;
-    border: 1px dashed rgba(240, 248, 255, 0.5);
-    height: 3rem;
-    border-radius: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-inline-start: 2%;
-    padding-inline-end: 2%;
-}
-      
-  }
-  /* --------------------------------------end mobile---------------- */
-  /* ---------------------------------------------------------------- */
 
 .cert {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .cert:hover {

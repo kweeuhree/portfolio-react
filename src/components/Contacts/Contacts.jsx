@@ -1,10 +1,12 @@
-import React from 'react';
-import './ContactsStyle.css';
-import Contact from './Contact';
 import { useState } from 'react';
+
+import Contact from './Contact';
+
 import { contactsData } from '../../models/data';
 
-const Contacts = () => {
+import './ContactsStyle.css';
+
+export const Contacts = () => {
   
   const [copied, setCopied] = useState(false);
  
@@ -15,8 +17,7 @@ const Contacts = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch(error) {
-      alert('Could not copy to clipboard')
-      console.log(`Error: couldnt copy email: ${error}`);
+      alert(`Error: couldnt copy email: ${error}`);
     }
   };
 
@@ -24,7 +25,7 @@ const Contacts = () => {
   return (
     <section>
       <header>Links</header>
-      <div className="contacts-section">
+      <div>
 
         {/* github */}
         <Contact data={contactsData.currentGithub} />
@@ -34,22 +35,16 @@ const Contacts = () => {
 
 
         {/* email container */}
-        <div className="email-container" onClick={copyEmail}>
-          <div className='email'>
+        <div onClick={copyEmail}>
+          <div>
             {contactsData.email}
           </div>
-          <div className="click-to-copy">{copied ? 'copied!' : 'click to copy'}</div>
+          <div>{copied ? 'copied!' : 'click to copy'}</div>
 
         </div>
-
-
-
-
 
 
       </div>
     </section>
   )
 }
-
-export default Contacts;

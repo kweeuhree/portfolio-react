@@ -1,15 +1,13 @@
-import React, {useState } from 'react';
-//import components
+import {useState } from 'react';
+
 import Overlay from '../Overlay/Overlay';
-import Card from '../Card/Card';
+import { Card } from '../index';
 
-//import styles
+import { certificationsData as data } from '../../models/certificationsData'
 import './CertificationsStyle.css';
-// import './CertificationsNestHubStyle.css'
 
 
-
-const Certifications = ({ data, header }) => {
+export const Certifications = () => {
 
   // initialize state for setting an overlay with a certification
   const [overlay, setOverlay] = useState(null);
@@ -18,7 +16,6 @@ const Certifications = ({ data, header }) => {
   const showOverlay = (credential) => {
     // set current credential as overlay
     setOverlay(credential);
-    // console.log(credential);
   };
 
   // stop displaaying an overlay
@@ -29,13 +26,13 @@ const Certifications = ({ data, header }) => {
 
 
   return (
-    <section className='certifications-section'>
-     <div className='top-certifications'>
-      <header>{header}</header>
+    <section>
+     <div>
+      <header>Certifications</header>
       <p>click on a card to see credential</p>
      </div>
       
-      <div className='card-section'>
+      <div>
 
         {/* loop through all credentials and return a card per credential */}
         {Object.values(data).map((item, index) => (
@@ -56,5 +53,3 @@ const Certifications = ({ data, header }) => {
     </section>
   );
 };
-
-export default Certifications;

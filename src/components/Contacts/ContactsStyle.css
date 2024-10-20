@@ -1,15 +1,8 @@
-@media (min-width: 1280px) {
-    .link-container div {
-    font-size: unset;
-}
-
-   .email-container {
+.email-container {
     border: 1px solid rgba(137, 43, 226, 0.336);
     padding: 1vw;
     display: grid;
     gap: 15%;
-    margin-right: 1%;
-    font-size: unset;
 }
 
 .click-to-copy {
@@ -18,177 +11,22 @@
     background-color: rgba(240, 248, 255, 0.105);
     transition: background-color 400ms 40ms linear;
     cursor: pointer;
-    font-size: unset;
-} 
+}
 
-  .contacts-section {
+.contacts-section {
     display: flex;
-    flex-direction: unset;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    /* border: 1px solid blueviolet; */
-}
-
-    .link-container {
-        display: unset;
-        width: 25%;
-        margin-block-end: 2%;
-        align-items: unset;
-        justify-content: unset;
-    }
-  }
-  /* --------------------------------------end desktop---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mid-large------------------- */
-  
-  @media (min-width: 760px) and (max-width: 1280px) { 
-    .link-container div {
-    font-size: 1.5rem;
-}
-
-  .contacts-section {
-    display: flex;
-    flex-direction: unset;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    margin: auto;
-    /* border: 1px solid blueviolet; */
-}
-
-    .link-container {
-        display: unset;
-        width: 35%;
-        margin-block-end: 2%;
-        align-items: unset;
-        justify-content: unset;
-    }
-
-    .email-container {
-        border: 1px solid rgba(137, 43, 226, 0.336);
-        padding: 1vw;
-        display: grid;
-        gap: 15%;
-        margin-right: 0;
-        font-size: 1.8rem;
-    }
-    
-    .click-to-copy {
-        border-left: 1px solid rgba(240, 248, 255, 0.225);
-        border-right: 1px solid rgba(240, 248, 255, 0.225);
-        background-color: rgba(240, 248, 255, 0.105);
-        transition: background-color 400ms 40ms linear;
-        cursor: pointer;
-        font-size: 2rem;
-    } 
-  }
-  /* --------------------------------------end mid-large---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mid------------------- */
-  
-  @media (min-width: 403px) and (max-width: 760px) {
-    .link-container div {
-    font-size: unset;
-}
-
-   .email-container {
-    border: 1px solid rgba(137, 43, 226, 0.336);
-    padding: 1vw;
-    display: grid;
-    gap: 15%;
-    margin-right: unset;
-    font-size: unset;
-}
-
-.click-to-copy {
-    border-left: 1px solid rgba(240, 248, 255, 0.225);
-    border-right: 1px solid rgba(240, 248, 255, 0.225);
-    background-color: rgba(240, 248, 255, 0.105);
-    transition: background-color 400ms 40ms linear;
-    cursor: pointer;
-    font-size: unset;
-} 
-
-  .contacts-section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: auto;
-    /* border: 1px solid blueviolet; */
-}
-
-    .link-container {
-        display: flex;
-        width: 90%;
-        margin-block-end: 2%;
-        align-items: center;
-        justify-content: space-around;
-    }
-  }
-  /* --------------------------------------end mid---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mobile------------------- */
-  
-  @media (max-width: 403px) {
-    .link-container div {
-    font-size: unset;
-}
-
-   .email-container {
-    border: 1px solid rgba(137, 43, 226, 0.336);
-    padding: 1vw;
-    display: grid;
-    gap: 15%;
-    margin-right: unset;
-    font-size: 1.1rem;
-}
-
-.click-to-copy {
-    border-left: 1px solid rgba(240, 248, 255, 0.225);
-    border-right: 1px solid rgba(240, 248, 255, 0.225);
-    background-color: rgba(240, 248, 255, 0.105);
-    transition: background-color 400ms 40ms linear;
-    cursor: pointer;
-    font-size: unset;
-} 
-
-  .contacts-section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: auto;
-    /* border: 1px solid blueviolet; */
 }
 
 .link-container {
     display: flex;
-    width: 70%;
-    margin-block-end: 2%;
-    align-items: center;
-    justify-content: space-around;
 }
 
-.link-container img {
-    max-width: 65%;
-}
-      
-  }
-  /* --------------------------------------end mobile---------------- */
-  /* ---------------------------------------------------------------- */
-
-  .email-container {
+.email-container {
     cursor: pointer;
-  }
+}
 
 .click-to-copy:hover {
     border-left: 1px solid rgba(240, 248, 255, 0.425);

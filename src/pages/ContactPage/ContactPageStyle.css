@@ -1,346 +1,38 @@
-@media (min-width: 1280px) {
-
 .get-in-touch {
-    width: 63%;
-    height: 100%;
-    font-size: 10rem;
     display: flex;
     justify-content: center;
-    /* border: solid blue; */
-    }
+}
 
 .contact-form-container {
-    /* leave space for border */
     border: 2px solid transparent;
-    /* make sure that entire border is filled with the gradient */
     border-image-slice: 1; 
-    /* custom angle value */
     --angle: 0deg;
     border-image: linear-gradient(var(--angle), #8f4eff8f, rgb(0, 255, 128), #c3c5c5e5) 1;
     animation: 10s rotateBorder ease-in-out infinite;
-    margin-block-start: 5%;
-    margin-block-end: 20%;
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-    height: 75vh;
     position: relative;
     box-shadow: 
-    10px 15px 25px 0px rgba(195, 231, 179, 0.5),
-    10px 10px 70px 0px rgba(255,255,255,0.15);
+        10px 15px 25px 0px rgba(195, 231, 179, 0.5),
+        10px 10px 70px 0px rgba(255,255,255,0.15);
 }
 
 .contact-form-container::before {
     content: '';
     background-image: url('https://images.unsplash.com/photo-1560780552-ba54683cb263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
     animation: rotateBackground 30s linear infinite;
-    width: 100%;
-    height: 100%;
     position: absolute;
     z-index: -1;
     opacity: 0.7;
-
-    background-position: unset;
 }
 
-
 .get-in-touch div {
-    width: 100%;
-    /* border: solid orange; */
-    /* padding-block-start: 8%; */
-    /* font-family: "Jersey 15", sans-serif; */
     font-family: "Bungee", sans-serif;
     font-weight: 400;
-    /* border: solid green; */
-    line-height: 9rem;
-    height: 100%;
-    text-align: start;
-    display:flex;
-    flex-wrap: unset;
-    align-items: start ;
-    justify-content: center;
-    flex-direction: column;
-    gap: unset;
     text-shadow: 1px 1px 2px #262535;   
 }
 
-.get-in-touch div>span:nth-of-type(2) {
-    margin-inline-start: 5%;
-}
-
-.get-in-touch div>span:nth-of-type(3) {
-    margin-inline-start: 10%;
-}
-
+.get-in-touch div>span:nth-of-type(2),
+.get-in-touch div>span:nth-of-type(3),
 .get-in-touch div>span:nth-of-type(4) {
-    margin-inline-start: 15%;
-}
-}
-  /* --------------------------------------end desktop---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mid-large------------------- */
-  
-  @media (min-width: 760px) and (max-width: 1280px) {
-
-    .get-in-touch {
-        width: 100%;
-        height: 35%;
-        font-size: 5rem;
-        display: flex;
-        justify-content: center;
-        /* border: solid blue; */
-        }
-    
-    .contact-form-container {
-        /* leave space for border */
-        border: 2px solid transparent;
-        /* make sure that entire border is filled with the gradient */
-        border-image-slice: 1; 
-        /* custom angle value */
-        --angle: 0deg;
-        border-image: linear-gradient(var(--angle), #8f4eff8f, rgb(0, 255, 128), #c3c5c5e5) 1;
-        animation: 10s rotateBorder ease-in-out infinite;
-        margin-block-start: 5%;
-        margin-block-end: 20%;
-        width: 99%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100vh;
-        position: relative;
-        box-shadow: 
-        10px 15px 25px 0px rgba(195, 231, 179, 0.5),
-        10px 10px 70px 0px rgba(255,255,255,0.15);
-        
-    }
-    
-    .contact-form-container::before {
-        content: '';
-        background-image: url('https://images.unsplash.com/photo-1560780552-ba54683cb263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
-        animation:  rotateBackground 30s linear infinite;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-        opacity: 0.7;
-
-        /* background-position: 50%; */
-    }
-    
-    
-    .get-in-touch div {
-        width: 55%;
-        /* border: solid orange; */
-        /* padding-block-start: 8%; */
-        /* font-family: "Jersey 15", sans-serif; */
-        font-family: "Bungee", sans-serif;
-        font-weight: 400;
-        /* border: solid green; */
-        line-height: 0rem;
-        height: 50%;
-        text-align: start;
-        display:flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 7rem;
-        text-shadow: 1px 1px 2px #555368;  
-    }
-    
-    .get-in-touch div>span:nth-of-type(2) {
-        margin-inline-start: unset;
-    }
-    
-    .get-in-touch div>span:nth-of-type(3) {
-        margin-inline-start: unset;
-    }
-    
-    .get-in-touch div>span:nth-of-type(4) {
-        margin-inline-start: unset;
-    }
-  }
-  /* --------------------------------------end mid-large---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mid------------------- */
-  
-  @media (min-width: 403px) and (max-width: 760px) {
-
-    .get-in-touch {
-        width: 100%;
-        height: 35%;
-        font-size: 4rem;
-        display: flex;
-        justify-content: center;
-        /* border: solid blue; */
-        }
-    
-    .contact-form-container {
-        /* leave space for border */
-        border: 2px solid transparent;
-        /* make sure that entire border is filled with the gradient */
-        border-image-slice: 1; 
-        /* custom angle value */
-        --angle: 0deg;
-        border-image: linear-gradient(var(--angle), #8f4eff8f, rgb(0, 255, 128), #c3c5c5e5) 1;
-        animation: 10s rotateBorder ease-in-out infinite;
-        margin-block-start: 5%;
-        margin-block-end: 20%;
-        width: 99%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100vh;
-        position: relative;
-        box-shadow: 
-        10px 15px 25px 0px rgba(195, 231, 179, 0.5),
-        10px 10px 70px 0px rgba(255,255,255,0.15);
-        
-    }
-    
-    .contact-form-container::before {
-        content: '';
-        background-image: url('https://images.unsplash.com/photo-1560780552-ba54683cb263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
-        animation:  unset;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-        opacity: 0.7;
-
-        /* background-position: 50%; */
-    }
-    
-    
-    .get-in-touch div {
-        width: 85%;
-        /* border: solid orange; */
-        /* padding-block-start: 8%; */
-        /* font-family: "Jersey 15", sans-serif; */
-        font-family: "Bungee", sans-serif;
-        font-weight: 400;
-        /* border: solid green; */
-        line-height: 0rem;
-        height: 60%;
-        text-align: start;
-        display:flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 4rem;
-        text-shadow: 1px 1px 2px #555368;  
-    }
-    
-    .get-in-touch div>span:nth-of-type(2) {
-        margin-inline-start: unset;
-    }
-    
-    .get-in-touch div>span:nth-of-type(3) {
-        margin-inline-start: unset;
-    }
-    
-    .get-in-touch div>span:nth-of-type(4) {
-        margin-inline-start: unset;
-    }
-  }
-  /* --------------------------------------end mid---------------- */
-  /* ---------------------------------------------------------------- */
-  /* --------------------------------------mobile------------------- */
-  
-  @media (max-width: 415px) {
-
-    .get-in-touch {
-        width: 100%;
-        height: 40%;
-        font-size: 4rem;
-        display: flex;
-        justify-content: center;
-        /* border: solid blue; */
-        }
-    
-    .contact-form-container {
-        /* leave space for border */
-        border: 2px solid transparent;
-        /* make sure that entire border is filled with the gradient */
-        border-image-slice: 1; 
-        /* custom angle value */
-        --angle: 0deg;
-        border-image: linear-gradient(var(--angle), #8f4eff8f, rgb(0, 255, 128), #c3c5c5e5) 1;
-        animation: 10s rotateBorder ease-in-out infinite;
-        margin-block-start: 5%;
-        margin-block-end: 20%;
-        width: 99%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100vh;
-        position: relative;
-        box-shadow: 
-        10px 15px 25px 0px rgba(195, 231, 179, 0.5),
-        10px 10px 70px 0px rgba(255,255,255,0.15);
-    }
-    
-    .contact-form-container::before {
-        content: '';
-        background-image: url('https://images.unsplash.com/photo-1560780552-ba54683cb263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
-        animation: unset;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-        opacity: 0.7;
-
-        /* background-position: 50%; */
-    }
-    
-    
-    .get-in-touch div {
-        width: 85%;
-        /* border: solid orange; */
-        /* padding-block-start: 8%; */
-        /* font-family: "Jersey 15", sans-serif; */
-        font-family: "Bungee", sans-serif;
-        font-weight: 400;
-        /* border: solid green; */
-        line-height: 0rem;
-        height: 60%;
-        text-align: start;
-        display:flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 4rem;
-        text-shadow: 1px 1px 2px #555368;  
-    }
-    
-    .get-in-touch div>span:nth-of-type(2) {
-        margin-inline-start: unset;
-    }
-    
-    .get-in-touch div>span:nth-of-type(3) {
-        margin-inline-start: unset;
-    }
-    
-    .get-in-touch div>span:nth-of-type(4) {
-        margin-inline-start: unset;
-    }
-}
-
-  /* --------------------------------------end mobile---------------- */
-  /* ---------------------------------------------------------------- */
-  
-
-
-.contact-page {
-    /* border: solid aliceblue; */
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+    margin-inline-start: unset;
 }

@@ -1,6 +1,4 @@
-import React from 'react'
-
-const ImageContainer = ({thisClass, src, alt}) => {
+export const ImageContainer = ({thisClass, src, alt}) => {
   return (
     <div className={thisClass}>
         <img src={src} alt={alt} />
@@ -8,4 +6,3 @@ const ImageContainer = ({thisClass, src, alt}) => {
   )
 }
 
-export default ImageContainer;
